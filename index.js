@@ -292,8 +292,49 @@ console.log(hundreds, tens, units);
 /**
  * BÀI TẬP 4:Cho biết tên và tọa độ nhà của 3 sinh viên. Cho biết tọa độ của trường đại học. Viết chương trình in tên sinh viên xa trường nhất.
  * 
- * INPUT:
+ * INPUT: TÊN + TỌA ĐỘ 3 SINH VIÊN 
  * PROCESS:
- * OUTPUT:
+ * 1: LẤY INPUT
+ * 2: TÍNH TỌA ĐỘ TỪ TRƯỜNG ĐẾN NHÀ 3 SINH VIÊN
+ * D = CĂN BẬC 2 CỦA (X2-X1)*(X2-X1) + (Y2-Y1)*(Y2-Y1)
+ * 3: SO SÁNH TỪNG QUẢNG ĐƯỜNG CỦA 3 SINH VIÊN VỚI NHAU IF ELSE
+ * 4: IN RA SINH VIÊN XA TRƯỜNG NHẤT
+ * OUTPUT: TÊN SINH VIÊN XA TRƯỜNG NHẤT 
  *
  */
+
+var student = "John";
+var student1 = "Kate";
+var student2 = "Lucas";
+var x=2,y=2;
+var x1=2,y1=4;
+var x2=5,y2=5;
+var x3=1, y3=1;
+
+// tọa đọ của trường học đến nhà học sinh thứ 1,2,3
+var s= Math.sqrt(((x3-x)*(x3-x))+((y3-y)*(y3-y)));
+var s1 =  Math.sqrt(((x3-x1)*(x3-x1))+((y3-y1)*(y3-y1)));
+var s2 =  Math.sqrt(((x3-x2)*(x3-x2))+((y3-y2)*(y3-y2)));
+
+if(s>s1){
+    if(s1>s2){
+        console.log(student,"xa trường nhất");
+    }
+    else{
+        if(s>s2){
+            console.log(student,"xa trường nhất");
+        }else{
+            console.log(student2,"xa trường nhất");
+        }
+    }
+}else{
+    if(s>s2){
+        console.log(student1,"xa trường nhất");
+    }else{
+        if(s2>s1){
+            console.log(student2,"xa trường nhất");
+        }else{
+            console.log(student1,"xa trường nhất");
+        }
+    }
+}
